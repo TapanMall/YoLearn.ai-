@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YoLearn.ai Questions</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Onboarding Section -->
+    <section id="onboarding-section" class="section active">
+        <div class="container">
+            <div class="onboarding-container">
+                <div class="onboarding-header">
+                    <h2 class="onboarding-title">Let's Get You Set Up! 🎯</h2>
+                    <p class="onboarding-subtitle">Answer a few questions to personalize your learning experience</p>
+                </div>
+
+                <!-- Question 1 -->
+                <div id="question-1" class="question active">
+                    <h3>What’s your study goal? 📚</h3>
+                    <div class="options">
+                        <button class="option-btn" data-value="11th">11th Grade Prep</button>
+                        <button class="option-btn" data-value="12th">12th Grade Prep</button>
+                        <button class="option-btn" data-value="test">Test Prep (SAT/ACT)</button>
+                        <button class="option-btn" data-value="other">Other</button>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div id="question-2" class="question">
+                    <h3>Pick your learning style: 🤖</h3>
+                    <div class="options">
+                        <button class="option-btn" data-value="fun">Fun AI (jokes & memes)</button>
+                        <button class="option-btn" data-value="serious">Serious AI (straight facts)</button>
+                        <button class="option-btn" data-value="chill">Chill Buddy (relaxed vibes)</button>
+                    </div>
+                </div>
+
+                <div id="onboarding-message" class="message"></div>
+            </div>
+        </div>
+    </section>
+    <script src="question.js"></script>
+</body>
+</html>

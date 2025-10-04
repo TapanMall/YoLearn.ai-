@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoLearn.ai Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-icon">🎓</div>
+            <span class="logo-text">YoLearn.ai</span>
+        </div>
+        <div class="nav-buttons">
+            <button class="nav-btn active">Home</button>
+            <a href="../dashboard/index.html" class="nav-btn">Dashboard</a>
+            <button class="nav-btn">Notifications <span class="badge">3</span></button>
+            <button class="nav-btn">Settings</button>
+        </div>
+        <div class="user-section">
+            <div class="greeting">Hey, User 👋 Ready to learn?</div>
+            <div class="avatar">👤</div>
+        </div>
+    </header>
+
+    <!-- Section Navigation -->
+    <nav class="section-nav">
+        <button class="section-btn active" data-section="feed">Study Feed</button>
+        <button class="section-btn" data-section="ai">Study with AI</button>
+        <button class="section-btn" data-section="groups">Groups & Challenges</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Study Feed -->
+        <section class="section-content active" id="feed">
+            <div class="section-header">
+                <h2>Study Feed</h2>
+                <p>Stay updated with educational content and community posts</p>
+                <button class="create-post-btn">✏️ Create Post</button>
+            </div>
+            <div class="feed-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Study Groups</button>
+                <button class="filter-btn">Achievements</button>
+                <button class="filter-btn">Resources</button>
+            </div>
+            <div class="feed-container">
+                <div class="post-card achievement-post">
+                    <div class="post-header">
+                        <div class="post-avatar">🧑‍🎓</div>
+                        <div class="post-info">
+                            <div class="post-author">Alex Chen</div>
+                            <div class="post-time">2 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Just aced my math quiz thanks to Yo's AI tutor! The personalized explanations are fire 🔥</p>
+                        <div class="post-media">
+                            <img src="https://via.placeholder.com/300x200/8b5cf6/ffffff?text=Math+Graph" alt="Math Graph" class="post-image">
+                        </div>
+                        <div class="achievement-badge">🎯 Quiz Master</div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn like-btn" data-likes="24">👍 24</button>
+                        <button class="action-btn comment-btn">💬 8</button>
+                        <button class="action-btn share-btn">🔄 5</button>
+                    </div>
+                </div>
+                <div class="post-card resource-post">
+                    <div class="post-header">
+                        <div class="post-avatar">👩‍💻</div>
+                        <div class="post-info">
+                            <div class="post-author">Maya Rodriguez</div>
+                            <div class="post-time">4 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Flashcards for biology just dropped! Who's joining the study group? 🧬</p>
+                        <div class="resource-link">📄 Biology Flashcards Set</div>
+                        <div class="gamified-badge">🏆 Top Contributor</div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn like-btn" data-likes="18">👍 18</button>
+                        <button class="action-btn comment-btn">💬 12</button>
+                        <button class="action-btn share-btn">🔄 3</button>
+                    </div>
+                </div>
+                <div class="post-card streak-post">
+                    <div class="post-header">
+                        <div class="post-avatar">🧑‍🔬</div>
+                        <div class="post-info">
+                            <div class="post-author">Jordan Kim</div>
+                            <div class="post-time">6 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>7-day streak! Yo's gamification keeps me motivated 💪</p>
+                        <div class="streak-indicator">🔥🔥🔥🔥🔥🔥🔥</div>
+                        <div class="xp-gained">+50 XP Earned</div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn like-btn" data-likes="32">👍 32</button>
+                        <button class="action-btn comment-btn">💬 6</button>
+                        <button class="action-btn share-btn">🔄 9</button>
+                    </div>
+                </div>
+                <div class="post-card ai-post">
+                    <div class="post-header">
+                        <div class="post-avatar">🤖</div>
+                        <div class="post-info">
+                            <div class="post-author">Yo AI</div>
+                            <div class="post-time">8 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Quick tip: Use the 'Deep Dive' mode for complex topics! 📚</p>
+                        <div class="ai-tip">💡 AI Insight</div>
+                        <div class="tip-content">Break down complex subjects into smaller, manageable chunks for better understanding.</div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn like-btn" data-likes="45">👍 45</button>
+                        <button class="action-btn comment-btn">💬 15</button>
+                        <button class="action-btn share-btn">🔄 7</button>
+                    </div>
+                </div>
+                <div class="post-card question-post">
+                    <div class="post-header">
+                        <div class="post-avatar">🎓</div>
+                        <div class="post-info">
+                            <div class="post-author">Sarah Lee</div>
+                            <div class="post-time">10 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Help! Struggling with calculus integrals. Any study tips? 🤔</p>
+                        <div class="question-tag">❓ Question</div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn like-btn" data-likes="12">👍 12</button>
+                        <button class="action-btn comment-btn">💬 23</button>
+                        <button class="action-btn share-btn">🔄 2</button>
+                    </div>
+                </div>
+                <div class="post-card group-post">
+                    <div class="post-header">
+                        <div class="post-avatar">👥</div>
+                        <div class="post-info">
+                            <div class="post-author">Physics Phalanx</div>
+                            <div class="post-time">12 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>New study session scheduled for tomorrow at 7 PM! Join us for quantum mechanics prep. ⚛️</p>
+                        <div class="group-info">📅 Tomorrow 7:00 PM • 15 members attending</div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn like-btn" data-likes="28">👍 28</button>
+                        <button class="action-btn comment-btn">💬 9</button>
+                        <button class="action-btn share-btn">🔄 11</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Study with AI -->
+        <section class="section-content" id="ai">
+            <div class="section-header">
+                <h2>Study with AI</h2>
+                <p>Chat with your personalized AI tutor and get instant help</p>
+            </div>
+            <div class="ai-modes">
+                <button class="mode-btn active" data-mode="quick">Quick Hack ⚡</button>
+                <button class="mode-btn" data-mode="deep">Deep Dive 📚</button>
+                <button class="mode-btn" data-mode="chill">Chill Buddy 😎</button>
+            </div>
+            <div class="chat-window">
+                <div class="chat-messages">
+                    <div class="message ai-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <p>Hey Tapan! Ready to crush some math? What's on your mind? 🎯</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Ask me anything... e.g., Explain quadratic equations" class="chat-text">
+                    <button class="send-btn">🚀</button>
+                </div>
+            </div>
+            <div class="sample-prompts">
+                <button class="prompt-btn">📝 Generate flashcards for algebra</button>
+                <button class="prompt-btn">🧠 Quiz me on history</button>
+                <button class="prompt-btn">💡 Explain photosynthesis simply</button>
+            </div>
+        </section>
+
+        <!-- Groups & Challenges -->
+        <section class="section-content" id="groups">
+            <div class="section-header">
+                <h2>Groups & Challenges</h2>
+                <p>Join study groups and compete in challenges to level up</p>
+                <button class="create-group-btn">+ Create Group</button>
+            </div>
+            <div class="groups-section">
+                <div class="group-card">
+                    <div class="group-icon">📚</div>
+                    <div class="group-info">
+                        <h3>Math Masters</h3>
+                        <p>12 members • Active now</p>
+                        <p>Next session: Today 6 PM</p>
+                    </div>
+                    <button class="join-btn">Join</button>
+                </div>
+                <div class="group-card">
+                    <div class="group-icon">🧬</div>
+                    <div class="group-info">
+                        <h3>Bio Buddies</h3>
+                        <p>8 members • Study session in 30min</p>
+                        <p>Next session: Tomorrow 5 PM</p>
+                    </div>
+                    <button class="join-btn">Join</button>
+                </div>
+                <div class="group-card">
+                    <div class="group-icon">🧪</div>
+                    <div class="group-info">
+                        <h3>Chem Champs</h3>
+                        <p>15 members • Active now</p>
+                        <p>Next session: Today 7 PM</p>
+                    </div>
+                    <button class="join-btn">Join</button>
+                </div>
+            </div>
+            <div class="challenges-section">
+                <h3>Challenge Rooms</h3>
+                <div class="challenge-card">
+                    <div class="challenge-icon">🏆</div>
+                    <div class="challenge-info">
+                        <h4>Weekly Math Quiz</h4>
+                        <p>Top 3 get badges! Ends in 2 days</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <button class="enter-btn">Enter</button>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">🧠</div>
+                    <div class="challenge-info">
+                        <h4>Science Brain Brawl</h4>
+                        <p>Compete to win exclusive rewards! Ends in 5 days</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                    <button class="enter-btn">Enter</button>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">📚</div>
+                    <div class="challenge-info">
+                        <h4>History Trivia</h4>
+                        <p>Test your knowledge and climb the leaderboard! Ends in 1 day</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <button class="enter-btn">Enter</button>
+                </div>
+                <div class="leaderboard">
+                    <h4>Global Leaderboard</h4>
+                    <div class="leader-item">
+                        <span class="rank">1</span>
+                        <span class="name">Alex Chen</span>
+                        <span class="points">1250 XP</span>
+                    </div>
+                    <div class="leader-item">
+                        <span class="rank">2</span>
+                        <span class="name">Maya R.</span>
+                        <span class="points">1180 XP</span>
+                    </div>
+                    <div class="leader-item">
+                        <span class="rank">3</span>
+                        <span class="name">Jordan K.</span>
+                        <span class="points">1100 XP</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="quick-tools">
+            <button class="tool-btn">🃏 Flashcards</button>
+            <button class="tool-btn">📝 Notes</button>
+            <button class="tool-btn">⏱️ Timer</button>
+            <button class="tool-btn">🤖 AI Shortcuts</button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YoLearn.ai Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Header / Top Bar -->
+    <header class="top-bar">
+        <a href="../home/index.html" class="nav-logo">
+            <img src="home.png" alt="Home" class="home-icon" />
+            Home
+        </a>
+        <div class="user-stats">
+            <div class="streak-badge">🔥 7-day streak</div>
+            <div class="xp-progress">
+                <div class="xp-bar-container">
+                    <div class="xp-bar" id="header-xp-bar" style="width: 65%;"></div>
+                </div>
+                <span class="level">Level 12</span>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="notifications">
+                <span class="notification-badge">🔔 <span class="count">3</span></span>
+            </div>
+            <div class="user-info-right">
+                <span class="username">Alex</span>
+                <div class="user-avatar" id="user-avatar">👤</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Avatar Selection Modal -->
+    <div id="avatar-modal" class="avatar-modal hidden">
+        <div class="avatar-modal-content">
+            <h3>Select Your Avatar</h3>
+            <div class="avatar-options">
+                <button class="avatar-option" data-avatar="👤">👤</button>
+                <button class="avatar-option" data-avatar="🦸‍♂️">🦸‍♂️</button>
+                <button class="avatar-option" data-avatar="🧙‍♀️">🧙‍♀️</button>
+                <button class="avatar-option" data-avatar="🤖">🤖</button>
+                <button class="avatar-option" data-avatar="🐱">🐱</button>
+            </div>
+            <button id="close-avatar-modal" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <main class="dashboard-container">
+        <!-- Summary / Analytics Panel -->
+        <section class="summary-panel">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">⏰</div>
+                    <div class="stat-content">
+                        <h3>Hours Studied</h3>
+                        <p class="stat-value">3.5h <span class="stat-sub">today</span></p>
+                        <div class="mini-bar">
+                            <div class="mini-fill" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-content">
+                        <h3>Tasks Completed</h3>
+                        <p class="stat-value">12 <span class="stat-sub">this week</span></p>
+                        <div class="mini-bar">
+                            <div class="mini-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-content">
+                        <h3>Challenges</h3>
+                        <p class="stat-value">5/8 <span class="stat-sub">completed</span></p>
+                        <div class="mini-bar">
+                            <div class="mini-fill" style="width: 62%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-content">
+                        <h3>Top Subject</h3>
+                        <p class="stat-value">Math <span class="stat-sub">85% progress</span></p>
+                        <div class="mini-bar">
+                            <div class="mini-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Snapshot / Quick Actions -->
+        <section class="ai-snapshot">
+            <div class="ai-buddy-mini card">
+                <div class="buddy-header">
+                    <div class="ai-avatar" id="ai-avatar">🤖</div>
+                    <div class="buddy-info">
+                        <h3>AI Buddy</h3>
+                        <p id="ai-mood-desc">Fun AI: Ready to make learning hilarious!</p>
+                    </div>
+                </div>
+                <div class="mood-selection">
+                    <button class="mood-btn active" data-mood="fun" title="Fun">😂</button>
+                    <button class="mood-btn" data-mood="chill" title="Chill">😎</button>
+                    <button class="mood-btn" data-mood="serious" title="Serious">👔</button>
+                </div>
+            </div>
+            <div class="quick-actions card">
+                <h3>Quick Actions</h3>
+                <div class="action-buttons">
+                    <button class="action-btn">🧠 Start AI Study</button>
+                    <button class="action-btn">📝 Generate Flashcards</button>
+                    <button class="action-btn">🔄 Switch Mode</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Activity / Feed -->
+        <section class="recent-activity">
+            <div class="activity-feed card">
+                <h2>Recent Activity</h2>
+                <div class="activity-cards" id="activity-cards">
+                    <article class="activity-card">
+                        <div class="activity-icon">🎯</div>
+                        <div class="activity-content">
+                            <p>Completed Math Challenge: Algebra Basics</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                        <div class="activity-badge">🏆</div>
+                    </article>
+                    <article class="activity-card">
+                        <div class="activity-icon">📝</div>
+                        <div class="activity-content">
+                            <p>Generated 20 flashcards for Physics</p>
+                            <span class="activity-time">5 hours ago</span>
+                        </div>
+                        <div class="activity-badge">⭐</div>
+                    </article>
+                    <article class="activity-card">
+                        <div class="activity-icon">🔥</div>
+                        <div class="activity-content">
+                            <p>7-day study streak achieved!</p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                        <div class="activity-badge">🔥</div>
+                    </article>
+                    <article class="activity-card">
+                        <div class="activity-icon">🤖</div>
+                        <div class="activity-content">
+                            <p>AI Study Session: Fun mode activated</p>
+                            <span class="activity-time">2 days ago</span>
+                        </div>
+                        <div class="activity-badge">🤖</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Progress Panel -->
+        <section class="tools-progress-section">
+            <div class="tools-progress card">
+                <h2>Tools & Progress</h2>
+                <div class="tools">
+                    <button class="tool-btn">🛠️ Study Tools</button>
+                    <button class="tool-btn">🏆 Challenges</button>
+                    <button class="tool-btn">👥 Groups</button>
+                </div>
+                <div class="progress-overview">
+                    <div class="overview-item">
+                        <span>Weekly Goal:</span>
+                        <div class="overview-bar">
+                            <div class="overview-fill" style="width: 75%;"></div>
+                        </div>
+                        <span>15/20h</span>
+                    </div>
+                    <div class="overview-item">
+                        <span>Streak:</span>
+                        <div class="streak-icons">🔥🔥🔥🔥🔥🔥🔥</div>
+                    </div>
+                    <div class="motivational-msg">Yo! You've studied 3 hours this week 💪</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Quick Actions -->
+    <div class="floating-actions">
+        <button class="floating-btn" id="quick-ai-chat" title="New AI Chat">🤖</button>
+        <button class="floating-btn" id="quick-challenge" title="Start Challenge">🎯</button>
+        <button class="floating-btn" id="quick-rewards" title="Check Rewards">🎁</button>
+    </div>
+
+    <!-- Pop-up Notifications -->
+    <div id="popup-container" class="popup-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
