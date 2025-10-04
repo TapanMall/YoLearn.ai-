@@ -184,4 +184,41 @@ document.addEventListener('DOMContentLoaded', () => {
     activityCards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.1}s`;
     });
+
+    // Companion adoption functionality
+    const adoptButtons = document.querySelectorAll('.adopt-btn');
+
+    const companions = {
+        coding: {
+            icon: '💻',
+            name: 'Coding Buddy',
+            description: 'GitHub Copilot meets Study Partner - Code smarter, learn faster!',
+            moodDesc: 'Your Coding Buddy is here to help you debug and learn!'
+        },
+        creativity: {
+            icon: '🎨',
+            name: 'Creativity Mentor',
+            description: 'Portfolio, arts, design - Unleash your creative genius!',
+            moodDesc: 'Your Creativity Mentor is ready to inspire your next masterpiece!'
+        },
+        fitness: {
+            icon: '🧘',
+            name: 'Mental Fitness Coach',
+            description: 'Stress hacks, time boxing - Master your mind and productivity!',
+            moodDesc: 'Your Mental Fitness Coach is here to keep you calm and focused!'
+        }
+    };
+
+    adoptButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const companionKey = button.closest('.companion-card').dataset.companion;
+            const companion = companions[companionKey];
+            if (companion) {
+                showPopup(`You adopted the ${companion.name}!`, 'center');
+                // Update AI Buddy display to companion icon and description
+                aiAvatar.textContent = companion.icon;
+                aiMoodDesc.textContent = companion.moodDesc;
+            }
+        });
+    });
 });
