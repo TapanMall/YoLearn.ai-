@@ -16,24 +16,26 @@
             <div class="logo-icon">🎓</div>
             <span class="logo-text">YoLearn.ai</span>
         </div>
-        <div class="nav-buttons">
-            <button class="nav-btn active">Home</button>
-            <a href="../dashboard/index.html" class="nav-btn">Dashboard</a>
-            <button class="nav-btn">Notifications <span class="badge">3</span></button>
-            <button class="nav-btn">Settings</button>
+        <div class="section-nav">
+            <button class="section-btn active" data-section="feed">Study Feed</button>
+            <button class="section-btn" data-section="ai">Study with AI</button>
+            <button class="section-btn" data-section="groups">Groups & Challenges</button>
         </div>
         <div class="user-section">
-            <div class="greeting">Hey, User 👋 Ready to learn?</div>
-            <div class="avatar">👤</div>
+            <div class="greeting">Hey, User 👋</div>
+            <div class="avatar" id="avatar-btn">👤</div>
+            <div class="user-dropdown" id="user-dropdown">
+                <button class="dropdown-item notification-btn">🔔 Notifications <span class="badge">3</span></button>
+                <button class="dropdown-item dashboard-btn">📊 Dashboard</button>
+                <button class="dropdown-item selfie-btn">
+                    <label for="selfie-upload" class="selfie-upload-label">📸 AI Buddy</label>
+                    <input type="file" id="selfie-upload" accept="image/*" hidden>
+                </button>
+                <button class="dropdown-item referral-btn">🎁 Invite Friends</button>
+                <button class="dropdown-item settings-btn">⚙️ Settings</button>
+            </div>
         </div>
     </header>
-
-    <!-- Section Navigation -->
-    <nav class="section-nav">
-        <button class="section-btn active" data-section="feed">Study Feed</button>
-        <button class="section-btn" data-section="ai">Study with AI</button>
-        <button class="section-btn" data-section="groups">Groups & Challenges</button>
-    </nav>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -43,12 +45,15 @@
                 <h2>Study Feed</h2>
                 <p>Stay updated with educational content and community posts</p>
                 <button class="create-post-btn">✏️ Create Post</button>
+                <button class="create-reel-btn">🎥 Create Reel</button>
             </div>
             <div class="feed-filters">
                 <button class="filter-btn active">All</button>
                 <button class="filter-btn">Study Groups</button>
                 <button class="filter-btn">Achievements</button>
                 <button class="filter-btn">Resources</button>
+                <button class="filter-btn">Videos</button>
+                <button class="filter-btn">Memes</button>
             </div>
             <div class="feed-container">
                 <div class="post-card achievement-post">
@@ -165,6 +170,88 @@
                         <button class="action-btn share-btn">🔄 11</button>
                     </div>
                 </div>
+                <div class="post-card video-post">
+                    <div class="post-header">
+                        <div class="post-avatar">🎥</div>
+                        <div class="post-info">
+                            <div class="post-author">Study Shorts</div>
+                            <div class="post-time">1 day ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Quick 60-second explanation of photosynthesis! 🌱</p>
+                        <div class="post-media">
+                            <video controls width="100%" height="200">
+                                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn like-btn" data-likes="67">👍 67</button>
+                        <button class="action-btn comment-btn">💬 22</button>
+                        <button class="action-btn share-btn">🔄 15</button>
+                    </div>
+                </div>
+                <div class="post-card reel-post">
+                    <div class="post-header">
+                        <div class="post-avatar">📱</div>
+                        <div class="post-info">
+                            <div class="post-author">ReelLearners</div>
+                            <div class="post-time">2 days ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Fun reel on quadratic formulas! Check it out 📐</p>
+                        <div class="post-media">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn like-btn" data-likes="89">👍 89</button>
+                        <button class="action-btn comment-btn">💬 34</button>
+                        <button class="action-btn share-btn">🔄 28</button>
+                    </div>
+                </div>
+                <div class="post-card meme-post">
+                    <div class="post-header">
+                        <div class="post-avatar">😂</div>
+                        <div class="post-info">
+                            <div class="post-author">MemeMaster</div>
+                            <div class="post-time">3 days ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>When you finally understand derivatives... 😎📈</p>
+                        <div class="post-media">
+                            <img src="https://via.placeholder.com/300x200/ff6b6b/ffffff?text=Calculus+Meme" alt="Calculus Meme" class="post-image">
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn like-btn" data-likes="156">👍 156</button>
+                        <button class="action-btn comment-btn">💬 45</button>
+                        <button class="action-btn share-btn">🔄 67</button>
+                    </div>
+                </div>
+                <div class="post-card educational-post">
+                    <div class="post-header">
+                        <div class="post-avatar">📚</div>
+                        <div class="post-info">
+                            <div class="post-author">EduHub</div>
+                            <div class="post-time">4 days ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Comprehensive guide to machine learning basics. Perfect for beginners! 🤖</p>
+                        <div class="resource-link">🔗 <a href="https://example.com/ml-guide" target="_blank">Read the Full Guide</a></div>
+                        <div class="educational-badge">📖 Educational Resource</div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn like-btn" data-likes="203">👍 203</button>
+                        <button class="action-btn comment-btn">💬 78</button>
+                        <button class="action-btn share-btn">🔄 92</button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -197,6 +284,7 @@
                 <button class="prompt-btn">📝 Generate flashcards for algebra</button>
                 <button class="prompt-btn">🧠 Quiz me on history</button>
                 <button class="prompt-btn">💡 Explain photosynthesis simply</button>
+                <button class="playlist-btn">🎵 Generate Study Playlist</button>
             </div>
         </section>
 
@@ -204,7 +292,10 @@
         <section class="section-content" id="groups">
             <div class="section-header">
                 <h2>Groups & Challenges</h2>
-                <p>Join study groups and compete in challenges to level up</p>
+                <p>Users can join or create groups</p>
+                <p>Gamified challenges with ranks, points, and leaderboards</p>
+                <p>Admins or popular educators can post quizzes for global ranking</p>
+                <p>Promotes collaborative and competitive learning</p>
                 <button class="create-group-btn">+ Create Group</button>
             </div>
             <div class="groups-section">
@@ -293,15 +384,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="quick-tools">
-            <button class="tool-btn">🃏 Flashcards</button>
-            <button class="tool-btn">📝 Notes</button>
-            <button class="tool-btn">⏱️ Timer</button>
-            <button class="tool-btn">🤖 AI Shortcuts</button>
-        </div>
-    </footer>
+
 
     <script src="script.js"></script>
 </body>

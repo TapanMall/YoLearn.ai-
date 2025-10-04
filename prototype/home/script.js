@@ -93,10 +93,33 @@ filterButtons.forEach(btn => {
         btn.classList.add('active');
 
         const filter = btn.textContent.toLowerCase();
+        let className = '';
+        switch(filter) {
+            case 'all':
+                className = 'all';
+                break;
+            case 'study groups':
+                className = 'group-post';
+                break;
+            case 'achievements':
+                className = 'achievement-post';
+                break;
+            case 'resources':
+                className = 'resource-post';
+                break;
+            case 'videos':
+                className = 'video-post';
+                break;
+            case 'memes':
+                className = 'meme-post';
+                break;
+            default:
+                className = filter + '-post';
+        }
         posts.forEach(post => {
             if (filter === 'all') {
                 post.style.display = 'block';
-            } else if (post.classList.contains(filter + '-post')) {
+            } else if (post.classList.contains(className)) {
                 post.style.display = 'block';
             } else {
                 post.style.display = 'none';
@@ -113,6 +136,26 @@ likeButtons.forEach(btn => {
         const newLikes = currentLikes + 1;
         btn.setAttribute('data-likes', newLikes);
         btn.textContent = `👍 ${newLikes}`;
+    });
+});
+
+// Comment Buttons
+const commentButtons = document.querySelectorAll('.comment-btn');
+commentButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const currentComments = parseInt(btn.textContent.split(' ')[1]);
+        const newComments = currentComments + 1;
+        btn.textContent = `💬 ${newComments}`;
+    });
+});
+
+// Share Buttons
+const shareButtons = document.querySelectorAll('.share-btn');
+shareButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const currentShares = parseInt(btn.textContent.split(' ')[1]);
+        const newShares = currentShares + 1;
+        btn.textContent = `🔄 ${newShares}`;
     });
 });
 
@@ -134,6 +177,78 @@ navButtons.forEach(btn => {
         navButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
     });
+});
+
+// User Dropdown
+const avatarBtn = document.getElementById('avatar-btn');
+const userDropdown = document.getElementById('user-dropdown');
+
+avatarBtn.addEventListener('click', () => {
+    userDropdown.classList.toggle('show');
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+    if (!avatarBtn.contains(e.target) && !userDropdown.contains(e.target)) {
+        userDropdown.classList.remove('show');
+    }
+});
+
+// Notification Button
+const notificationBtn = document.querySelector('.notification-btn');
+notificationBtn.addEventListener('click', () => {
+    alert('Opening Notifications! 🔔');
+    userDropdown.classList.remove('show');
+});
+
+// Dashboard Button
+const dashboardBtn = document.querySelector('.dashboard-btn');
+dashboardBtn.addEventListener('click', () => {
+    window.location.href = '../dashboard/index.html';
+});
+
+// Settings Button
+const settingsBtn = document.querySelector('.settings-btn');
+settingsBtn.addEventListener('click', () => {
+    alert('Opening Settings! ⚙️');
+    userDropdown.classList.remove('show');
+});
+
+// AI Selfie Buddy
+const selfieUpload = document.getElementById('selfie-upload');
+const selfieLabel = document.querySelector('.selfie-upload-label');
+
+selfieLabel.addEventListener('click', () => {
+    selfieUpload.click();
+});
+
+selfieUpload.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        alert(`AI Buddy activated! Processing your selfie: ${file.name}`);
+        // Here you would typically send the file to an AI service
+    }
+});
+
+// Create Reel Button
+const createReelBtn = document.querySelector('.create-reel-btn');
+createReelBtn.addEventListener('click', () => {
+    alert('Opening Reel Creator! 🎥');
+    // In a real app, this would open a reel creation modal or page
+});
+
+// Generate Study Playlist Button
+const playlistBtn = document.querySelector('.playlist-btn');
+playlistBtn.addEventListener('click', () => {
+    alert('Generating personalized study playlist! 🎵');
+    // In a real app, this would generate and display a playlist
+});
+
+// Referral Rewards Button
+const referralBtn = document.querySelector('.referral-btn');
+referralBtn.addEventListener('click', () => {
+    alert('Share your referral link and earn rewards! 🎁');
+    // In a real app, this would open a referral modal or copy link
 });
 
 // Initial Load Animation
