@@ -1,4 +1,0 @@
-- [x] Add Companion Personas section to index.html after ai-snapshot
-- [x] Add adopt button event listeners in script.js
-- [ ] Test adoption functionality and popup
-- [x] Optionally integrate adopted companion with AI Buddy display
