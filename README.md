@@ -59,6 +59,10 @@ YoLearn.ai is an innovative AI-powered learning platform designed specifically f
    - Navigate to `prototype/login.html` to access the interactive prototype
    - Use the demo credentials: `admin` / `123`
 
+## 🌐 Live Demo
+
+[View Live Demo](https://your-live-demo-link-here.com) - Experience YoLearn.ai in action!
+
 ### Project Structure
 
 ```
