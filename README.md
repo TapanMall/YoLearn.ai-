@@ -61,7 +61,7 @@ YoLearn.ai is an innovative AI-powered learning platform designed specifically f
 
 ## 🌐 Live Demo
 
-[View Live Demo](https://your-live-demo-link-here.com) - Experience YoLearn.ai in action!
+[View Live Demo](https://tapanmall.github.io/YoLearn.ai-/) - Experience YoLearn.ai in action!
 
 ### Project Structure
 
