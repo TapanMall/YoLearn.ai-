@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.removeItem('studyGoal');
             localStorage.removeItem('aiStyle');
             loginError.textContent = '';
-            // Redirect to question page
-            window.location.href = 'question.html';
+            // Redirect to onboarding page
+            window.location.href = 'onboarding.html';
         } else {
             loginError.textContent = 'Invalid credentials! Try admin/123 😅';
         }

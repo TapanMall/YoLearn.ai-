@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 onboardingMessage.textContent = message;
                 setTimeout(() => {
-                    window.location.href = 'dashboard/index.html';
+                    window.location.href = 'dashboard/dashboard.html';
                 }, 2000);
             } else {
                 if (question === 'question-1') {

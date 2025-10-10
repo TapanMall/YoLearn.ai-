@@ -204,7 +204,7 @@ notificationBtn.addEventListener('click', () => {
 // Dashboard Button
 const dashboardBtn = document.querySelector('.dashboard-btn');
 dashboardBtn.addEventListener('click', () => {
-    window.location.href = '../dashboard/index.html';
+    window.location.href = '../dashboard/dashboard.html';
 });
 
 // Settings Button
